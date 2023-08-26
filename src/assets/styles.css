@@ -1,0 +1,31 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /*Colors */
+
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  -off-black: hsl(0, 0%, 8%);
+}
+
+.body {
+  background-color: var(--Off-white);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--Smokey-grey);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
