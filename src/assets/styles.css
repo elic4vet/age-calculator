@@ -12,6 +12,7 @@
   --White: hsl(0, 0%, 100%);
   --Off-white: hsl(0, 0%, 94%);
   --Light-grey: hsl(0, 0%, 86%);
+  --Lighter-grey: hsl(0, 0%, 95%);
   --Smokey-grey: hsl(0, 1%, 44%);
   --off-black: hsl(0, 0%, 8%);
 
@@ -48,14 +49,13 @@ input {
   color: var(--off-black);
   font-weight: var(--fw-bold);
   font-size: 16px;
-  border: 1px solid var(--Light-grey);
+  border: 2px solid var(--Lighter-grey);
   border-radius: 5px;
   padding-left: 15px;
   margin-bottom: 20px;
 }
 
 input:focus {
-  display: block;
   outline: none;
   border: 2px solid var(--Purple);
 }
