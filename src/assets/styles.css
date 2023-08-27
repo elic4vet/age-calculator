@@ -126,11 +126,12 @@ hr {
   margin-bottom: 10px;
 }
 
-.result-years,
-.result-months,
-.result-days {
+.result_years,
+.result_months,
+.result_days {
   color: var(--Purple);
   font-weight: var(--fw-bold);
+  margin-right: 10px;
 }
 .attribution {
   display: flex;
