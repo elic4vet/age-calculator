@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 
   /*Colors */
 
@@ -15,20 +15,20 @@
   --Smokey-grey: hsl(0, 1%, 44%);
   --off-black: hsl(0, 0%, 8%);
 
-  --fw-reg: 400i;
+  --fw-reg: 400;
   --fw-bold: 700;
-  --fw-extrabold: 800i;
+  --fw-extrabold: 800;
 }
 
 body {
   background-color: var(--Light-grey);
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.5;
-  color: var(--off-black);
+  color: var(--Smokey-grey);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 ul {
@@ -42,15 +42,34 @@ ul {
 }
 
 input {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 80px;
+  color: var(--off-black);
+  font-weight: var(--fw-bold);
+  font-size: 16px;
+  border: 1px solid var(--Light-grey);
+  border-radius: 5px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--Purple);
 }
 
 hr {
   margin-left: 0px;
   width: 450px;
   border: 0.5px solid var(--Light-grey);
+}
+
+.year,
+.month,
+.day {
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .container {
@@ -89,14 +108,35 @@ hr {
   width: 25px;
 }
 
+.years,
+.months,
+.days {
+  display: flex;
+  flex-direction: row;
+  font-size: 64px;
+  font-weight: var(--fw-extrabold);
+  color: var(--off-black);
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.result-years,
+.result-months,
+.result-days {
+  color: var(--Purple);
+  font-weight: var(--fw-bold);
+}
 .attribution {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--off-black);
 }
 
 .attribution a {
   text-decoration: none;
   margin-right: 5px;
   margin-left: 5px;
+  color: var(--Purple);
 }
