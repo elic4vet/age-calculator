@@ -17,8 +17,10 @@ button.addEventListener("click", function () {
   let currentYear = currentDate.getFullYear();
   let currentMonth = currentDate.getMonth() + 1;
   let currentDay = currentDate.getDate();
-
   let years = currentYear - yearOfBirth;
+  let months = currentMonth - monthOfBirth;
+  let days = currentDay - dayOfBirth;
+
   if (currentYear < yearOfBirth) {
     years--;
   } else if (currentYear == yearOfBirth) {
@@ -27,7 +29,6 @@ button.addEventListener("click", function () {
     }
   }
 
-  let months = currentMonth - monthOfBirth;
   if (currentMonth < monthOfBirth) {
     months += 12;
   } else if (currentMonth == monthOfBirth) {
@@ -36,7 +37,6 @@ button.addEventListener("click", function () {
     }
   }
 
-  let days = currentDay - dayOfBirth;
   if (currentDay < dayOfBirth) {
     days += 30;
   } else if (currentDay == dayOfBirth) {
