@@ -12,7 +12,6 @@ button.addEventListener("click", function () {
   let yearOfBirth = date.getFullYear();
   let monthOfBirth = date.getMonth() + 1; // month + 1 because month starts from 0
   let dayOfBirth = date.getDate();
-
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
   let currentMonth = currentDate.getMonth() + 1;
@@ -20,6 +19,9 @@ button.addEventListener("click", function () {
   let years = currentYear - yearOfBirth;
   let months = currentMonth - monthOfBirth;
   let days = currentDay - dayOfBirth;
+  let result_years = document.querySelector(".result_years");
+  let result_months = document.querySelector(".result_months");
+  let result_days = document.querySelector(".result_days");
 
   if (currentYear < yearOfBirth) {
     years--;
@@ -45,11 +47,7 @@ button.addEventListener("click", function () {
     }
   }
 
-  let result_years = document.querySelector(".result_years");
   result_years.innerHTML = `${years}`;
-
-  let result_months = document.querySelector(".result_months");
   result_months.innerHTML = `${months}`;
-  let result_days = document.querySelector(".result_days");
   result_days.innerHTML = `${days}`;
 });
