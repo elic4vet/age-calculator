@@ -66,12 +66,15 @@ function checkDay() {
 }
 
 function CalculateDate() {
-  checkYear();
-  checkMonth();
-  checkDay();
-  result_years.innerHTML = years;
-  result_months.innerHTML = months;
-  result_days.innerHTML = days;
+  if (!checkYear() && !checkMonth() && !checkDay()) {
+    // if any of the functions return false, the function will stop and return false and the results will not be shown
+    return false;
+  } else {
+    result_years.innerHTML = years;
+    result_months.innerHTML = months;
+    result_days.innerHTML = days;
+    return true;
+  }
 }
 
 button.addEventListener("click", CalculateDate);
