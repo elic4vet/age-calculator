@@ -2,8 +2,11 @@ let button = document.getElementById("btn");
 let inputDay = document.getElementById("day");
 let inputMonth = document.getElementById("month");
 let inputYear = document.getElementById("year");
-let errorDay = document.querySelector(".errorDay");
 
+/*errors*/
+let errorDay = document.querySelector(".errorDay");
+let errorMonth = document.querySelector(".errorMonth");
+let errorYear = document.querySelector(".errorYear");
 /*inputs values*/
 
 let day = inputDay.value;
@@ -33,22 +36,22 @@ let result_months = document.querySelector(".result_months");
 let result_days = document.querySelector(".result_days");
 
 function checkYear() {
-  if (currentYear < yearOfBirth) {
-    years--;
-  } else if (currentYear == yearOfBirth) {
-    if (currentYear < yearOfBirth) {
-      years--;
-    }
+  if (+inputYear.value > 2023 || +inputYear.value < 1) {
+    errorYear.textContent = "Must be a valid Year";
+    return false;
+  } else {
+    errorYear.innerHTML = "";
+    return true;
   }
 }
 
 function checkMonth() {
-  if (currentMonth < monthOfBirth) {
-    months += 12;
-  } else if (currentMonth == monthOfBirth) {
-    if (currentMonth < monthOfBirth) {
-      months += 12;
-    }
+  if (+inputMonth.value > 12 || +inputMonth.value < 1) {
+    errorMonth.textContent = "Must be a valid Month";
+    return false;
+  } else {
+    errorMonth.innerHTML = "";
+    return true;
   }
 }
 
