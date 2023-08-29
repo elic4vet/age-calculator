@@ -2,6 +2,7 @@ let button = document.getElementById("btn");
 let inputDay = document.getElementById("day");
 let inputMonth = document.getElementById("month");
 let inputYear = document.getElementById("year");
+let errorDay = document.querySelector(".errorDay");
 
 /*inputs values*/
 
@@ -52,12 +53,12 @@ function checkMonth() {
 }
 
 function checkDay() {
-  if (currentDay < dayOfBirth) {
-    days += 30;
-  } else if (currentDay == dayOfBirth) {
-    if (currentDay < dayOfBirth) {
-      days += 30;
-    }
+  if (+inputDay.value < 1 || day.value > 31) {
+    errorDay.textContent = "Must be a valid Day";
+    return false;
+  } else {
+    errorDay.innerHTML = "";
+    return true;
   }
 }
 
