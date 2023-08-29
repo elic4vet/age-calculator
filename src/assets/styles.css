@@ -146,3 +146,11 @@ hr {
   margin-left: 5px;
   color: var(--Purple);
 }
+
+.errorDay,
+.errorMonth,
+.errorYear {
+  color: var(--light-red);
+  font-weight: var(--fw-bold);
+  display: flex;
+}
