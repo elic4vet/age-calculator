@@ -38,9 +38,11 @@ let result_days = document.querySelector(".result_days");
 function checkYear() {
   if (+inputYear.value > 2023 || +inputYear.value < 1) {
     errorYear.textContent = "Must be a valid Year";
+    inputYear.classList.add("invalid");
     return false;
   } else {
     errorYear.innerHTML = "";
+    inputYear.classList.remove("invalid");
     return true;
   }
 }
@@ -48,9 +50,11 @@ function checkYear() {
 function checkMonth() {
   if (+inputMonth.value > 12 || +inputMonth.value < 1) {
     errorMonth.textContent = "Must be a valid Month";
+    inputMonth.classList.add("invalid");
     return false;
   } else {
     errorMonth.innerHTML = "";
+    inputMonth.classList.remove("invalid");
     return true;
   }
 }
@@ -58,9 +62,11 @@ function checkMonth() {
 function checkDay() {
   if (+inputDay.value < 1 || day.value > 31) {
     errorDay.textContent = "Must be a valid Day";
+    inputDay.classList.add("invalid");
     return false;
   } else {
     errorDay.innerHTML = "";
+    inputDay.classList.remove("invalid");
     return true;
   }
 }
